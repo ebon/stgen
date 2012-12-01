@@ -1,0 +1,5 @@
+templating_wf.cfg
+/presentation/log/log_generation.txt
+/presentation/standard.tpl
+/presentation/wf.tpl
+/presentation/wfresult.html

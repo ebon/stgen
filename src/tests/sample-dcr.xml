@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <appli_display_config>
+    <diplay_flag>t</diplay_flag>
+    <genre_type>feature</genre_type>
+    <page_id>1288698445021</page_id>
+    <index_flag>t</index_flag>
+    <index_order>5</index_order>
+  </appli_display_config>
+  <title_area>
+    <image_url>dummy</image_url>
+    <display_device>appli</display_device>
+    <lead_text>リードリードリードリードリードリードリード&lt;br&gt;
+リードリードリードリードリードリードリード</lead_text>
+    <campaign_term>2010年11月～2010年12月</campaign_term>
+  </title_area>
+  <contents>
+    <campaign_normal>
+      <free>
+        <display_device>web, appli</display_device>
+        <headline>フリー見出し</headline>
+        <color>green</color>
+        <free_text>テキストテキストテキストテキストテキストテキストテキストテキスト
+テキストテキストテキストテキストテキストテキストテキストテキストテキスト&lt;br&gt;
+テキストテキストテキストテキストテキストテキストテキストテキストテキスト</free_text>
+      </free>
+      <entry1>
+        <display_device>web, appli</display_device>
+        <link_text>ﾌﾟﾗﾁﾅ会員様3倍!!</link_text>
+        <link_type>entry</link_type>
+        <link_uri>https://oubo.rakuten.co.jp/apply/books/all/1014/limitedpointup3/?c2=3422231461</link_uri>
+        <note>注記注記注記注記注記注記注記注記注記注記注記注記注記注記注記注記注記注記注記注記</note>
+      </entry1>
+      <campaign_detail>
+        <display_device>web, appli</display_device>
+        <headline>72時間限定!ﾌﾟﾗﾁﾅ会員様3倍ｷｬﾝﾍﾟｰﾝ!!</headline>
+        <color>beige</color>
+        <free_text>フリーフリーフリーフリーフリーフリー
+フリーフリーフリーフリーフリーフリーフリー&lt;br&gt;
+キャンペーン詳細</free_text>
+        <sub_title>Web to リンク設定　小見出し </sub_title>
+        <link_list>
+          <link_text>あああああああああああああああああああ</link_text>
+          <link_url>http://m.rakuten.co.jp/ev/book/info/multiitem-pointup/index-20101019.phtml</link_url>
+        </link_list>
+        <link_list>
+          <link_text>いいいいいいいいいいいいいいいいいいいい</link_text>
+          <link_url>http://books.rakuten.co.jp/rb/【予約】-日本経済が手にとるようにわかる本-数字を関連づけると世の中が見えてくる-小宮一慶-9784822248277/item/6653363/</link_url>
+        </link_list>
+      </campaign_detail>
+    </campaign_normal>
+  </contents>
+</root>

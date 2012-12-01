@@ -1,0 +1,13 @@
+{%- for p in root.csvfile
+             | myread_csvdata
+             | mysorted(cmpkey='list_order', reverse=False) %}
+<tr>
+  <td class="Column-02">
+    <a onclick="s.linkTrackVars='eVar3'; s.eVar3='FX_index_Contents_Table_Banner_{{ p.keycode }}'; s.tl(this,'o','Link Click');" target="_blank" href="{{ p.top_url }}"><img width="120" height="60" border="0" alt="{{ p.product_name }}" src="http://point-g.rakuten.co.jp/fx/img/thumb/fx_item01/{{ p.img120x60 }}"><br>
+    <strong>{{ p.product_name }}</strong>&nbsp;(<strong>{{ p.client }}</strong>)</a>
+  </td>
+  <td class="Column-03">{{ p.catch }}</td>
+  <td class="Column-04"><span>{{ p.point }}ポイント</span><img width="112" height="21" alt="口座開設後取引" src="./img/point_after_trading.png"></td>
+  <td class="Column-05"><span class="AnchorBtn"><a onclick="s.linkTrackVars='eVar3'; s.eVar3='FX_index_Contents_Table_AnchorBtn_{{ p.keycode }}'; s.tl(this,'o','Link Click');" target="_blank" href="{{ p.top_url }}">口座開設</a></span></td>
+</tr>
+{%- endfor %}

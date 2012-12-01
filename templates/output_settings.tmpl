@@ -1,0 +1,58 @@
+{%- set categories = ['fx_top_pc', 'fx_point_pc', 'fx_fee_pc',
+                      'fx_leverage_pc', 'fx_swap_pc', 'fx_pair_pc',
+                      'fx_service_pc', 'fx_support_pc', 'fx_trust_pc',
+                      'fx_top_sp', 'fx_point_sp', 'fx_fee_sp',
+                      'fx_leverage_sp', 'fx_swap_sp', 'fx_pair_sp',
+                      'fx_service_sp', 'fx_support_sp', 'fx_trust_sp'] %}
+{
+   {%- for category in categories %}
+    "{{ category }}" : {
+         "tmpl"       : "{{ category }}.tmpl",
+         "outputpath" : "/output_test/{{ category }}.html"
+    }{% if not loop.last %},{% endif %}
+   {%- endfor %}
+}
+
+
+{# -- 
+
+** Format of output_setting
+The strings made from this output_settings.tmpl should be a Python's dictionary.
+And in the main.py, 
+
+Example) You can write the above source directly like bellow.
+"""
+    "fx_top_pc" : {
+         "tmpl"       : "fx_top_pc.tmpl",
+         "outputpath" : "/test/inc/output_test/fx_top_pc.html"
+    },
+    "fx_point_pc" : {
+         "tmpl"       : "fx_point_pc.tmpl",
+         "outputpath" : "/test/inc/output_test/fx_point_pc.html"
+    },
+"""
+
+Additionaly, this output_settings.tmpl is worked as jijna's, 
+so you can also write with jinja's grammer like above actural sample's source.
+
+** Elements being able to use inside output_settings.tmpl
+
+You can use the two following two stuffs inside output_settings.tmpl.
+
+- Dcr-path giving as argument.
+- An elements containing in the dcr-path.
+
+
+Example) 
+"""
+    "fx_top_pc" : {
+         "tmpl"       : "fx_top_pc.tmpl",
+         "outputpath" : "/test/inc/output_test/{{ dcrpath | somefunc }}/fx_top_pc.html"
+    },
+    "fx_point_pc" : {
+         "tmpl"       : "fx_point_pc.tmpl",
+         "outputpath" : "/test/inc/output_test/{{ root.itemA }}/fx_point_pc.html"
+    },
+"""
+
+#}

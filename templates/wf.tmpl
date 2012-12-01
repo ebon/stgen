@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE available_templates SYSTEM './ne_templating_wf.dtd'>
+<templating>
+  <presentation name="/templatedata/{{ dcr_type }}/presentation/wf.tpl">
+	<output_name file="yes" ext=".html">/templatedata/{{ dcr_type }}/presentation/wfresult.html</output_name>
+    {%- for f in attached_files %}
+    <attach>/htdocs{{ f }}</attach>
+    {%- endfor %}
+    <!-- editable -->
+    <!-- /editable -->
+  </presentation>
+</templating>

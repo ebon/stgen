@@ -1,0 +1,29 @@
+{%- for p in root.csvfile
+             | myread_csvdata
+             | mysorted(cmpkey='fee_order', reverse=False) %}
+<tr>
+  <td class="Column-01">
+    <a onclick="s.linkTrackVars='eVar3'; s.eVar3='FX_index_Contents_Table_Banner_{{ p.keycode }}'; s.tl(this,'o','Link Click');" target="_blank" href="{{ p.fee_url }}"><img width="120" height="60" border="0" alt="{{ p.product_name }}" src="http://point-g.rakuten.co.jp/fx/img/thumb/fx_item01/{{ p.img120x60 }}"><br>
+    <strong>{{ p.product_name }}</strong>&nbsp;(<strong>{{ p.client }}</strong>)</a>
+  </td>
+  <td class="Column-02">{{ p.spread_usd }}</td>
+  <td class="Column-Custom-Farst">銭</td>
+  <td class="Column-Custom-Farst">{% if not p.fixflag_usd == ' ' %}<img width="18" height="62" src="/fx/img/fixed_icon.png" alt="原則固定">{% endif %}</td>
+  <td class="Column-03">{{ p.spread_euro }}</td>
+  <td class="Column-Custom-Second">銭</td>
+  <td class="Column-Custom-Second">{% if not p.fixflag_euro == ' ' %}<img width="18" height="62" src="/fx/img/fixed_icon.png" alt="原則固定">{% endif %}</td>
+  <td class="Column-04">{{ p.spread_pond }}</td>
+  <td class="Column-Custom-Farst">銭</td>
+  <td class="Column-Custom-Farst">{% if not p.fixflag_pond == ' ' %}<img width="18" height="62" src="/fx/img/fixed_icon.png" alt="原則固定">{% endif %}</td>
+  <td class="Column-05">{{ p.spread_aud }}</td>
+  <td class="Column-Custom-Second">銭</td>
+  <td class="Column-Custom-Second">{% if not p.fixflag_aud == ' ' %}<img width="18" height="62" src="/fx/img/fixed_icon.png" alt="原則固定">{% endif %}</td>
+  <td class="Column-06">{{ p.spread_nzd }}</td>
+  <td class="Column-Custom-Farst">銭</td>
+  <td class="Column-Custom-Farst">{% if not p.fixflag_nzd == ' ' %}<img width="18" height="62" src="/fx/img/fixed_icon.png" alt="原則固定">{% endif %}</td>
+  <td class="Column-07">{{ p.spread_rand }}</td>
+  <td class="Column-Custom-Second">銭</td>
+  <td class="Column-Custom-Second">{% if not p.fixflag_rand == ' ' %}<img width="18" height="62" src="/fx/img/fixed_icon.png" alt="原則固定">{% endif %}</td>
+  <td class="Column-08"><span class="AnchorBtn"><a onclick="s.linkTrackVars='eVar3'; s.eVar3='FX_index_Contents_Table_AnchorBtn_{{ p.keycode }}'; s.tl(this,'o','Link Click');" target="_blank" href="{{ p.fee_url }}">口座開設</a></span></td>
+</tr>
+{%- endfor%}
